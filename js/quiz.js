@@ -1,148 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
   const questions = [
     {
-      category: 'Fundamentos de Business Intelligence',
-      question: '¿Qué es Business Intelligence principalmente?',
+      question: '¿Qué es Business Intelligence?',
       options: [
-        'Un lenguaje de programación para automatizar reportes.',
-        'Un conjunto de procesos y herramientas para convertir datos en información útil para decisiones.',
-        'Un sistema operativo para servidores de datos.',
-        'Una estrategia de marketing basada solo en redes sociales.'
+        'Un sistema para guardar archivos de la empresa.',
+        'Un conjunto de herramientas para transformar datos en información útil.',
+        'Un programa para diseñar páginas web.',
+        'Una red social para analistas.'
       ],
       answer: 1,
-      explanation: 'Business Intelligence reúne procesos, herramientas y análisis para convertir datos en información útil y apoyar decisiones organizacionales.'
+      explanation: 'Business Intelligence ayuda a convertir datos en información útil para apoyar decisiones de negocio.'
     },
     {
-      category: 'Toma de decisiones',
-      question: '¿Cuál de estas opciones describe mejor una decisión táctica?',
-      options: [
-        'Definir la misión y visión de la empresa.',
-        'Ajustar una campaña promocional según el desempeño de ventas por región.',
-        'Reemplazar el sistema operativo corporativo.',
-        'Contratar a un nuevo gerente general.'
-      ],
-      answer: 1,
-      explanation: 'Una decisión táctica suele tener un alcance medio y se orienta a ajustar acciones operativas o de negocio según indicadores y resultados.'
-    },
-    {
-      category: 'KPI e interpretación de datos',
       question: '¿Qué es un KPI?',
       options: [
-        'Un tipo de base de datos no relacional.',
-        'Un indicador clave de rendimiento que mide desempeño frente a un objetivo.',
-        'Un documento legal de la empresa.',
-        'Una herramienta de diseño gráfico.'
-      ],
-      answer: 1,
-      explanation: 'Un KPI es un indicador clave de rendimiento utilizado para medir si la organización está avanzando hacia sus metas.'
-    },
-    {
-      category: 'Fundamentos de Business Intelligence',
-      question: '¿Cuál es la diferencia principal entre datos e información?',
-      options: [
-        'Los datos siempre son visualizados; la información no.',
-        'Los datos son hechos sin contexto, mientras la información los organiza y les da sentido.',
-        'La información se genera sin datos.',
-        'No hay diferencia; son sinónimos.'
-      ],
-      answer: 1,
-      explanation: 'Los datos son registros o hechos aislados, mientras que la información surge cuando esos datos se organizan, analizan y contextualizan.'
-    },
-    {
-      category: 'Procesos ETL',
-      question: 'En ETL, ¿qué ocurre durante la fase de Transform?',
-      options: [
-        'Se eliminan los reportes antiguos.',
-        'Se limpian, normalizan y enriquecen los datos.',
-        'Se publica el dashboard en internet.',
-        'Se compran nuevos licenciamientos.'
-      ],
-      answer: 1,
-      explanation: 'En la transformación se realizan tareas como limpieza, normalización, eliminación de duplicados y cálculo de indicadores.'
-    },
-    {
-      category: 'Limpieza y calidad de datos',
-      question: '¿Por qué es importante eliminar duplicados en un dataset?',
-      options: [
-        'Porque reduce la velocidad de carga de la base de datos.',
-        'Porque evita resultados sesgados y métricas infladas.',
-        'Porque convierte todo en texto.',
-        'Porque reemplaza la necesidad de documentar el proceso.'
-      ],
-      answer: 1,
-      explanation: 'Los duplicados pueden inflar conteos y distorsionar indicadores, por lo que deben corregirse antes del análisis.'
-    },
-    {
-      category: 'Aplicaciones prácticas empresariales',
-      question: '¿Cuál es un caso típico de uso de BI en una empresa comercial?',
-      options: [
-        'Crear un contrato de arrendamiento.',
-        'Analizar ventas por producto, región y periodo para tomar decisiones comerciales.',
-        'Configurar un router Wi-Fi.',
-        'Escribir un documento de políticas internas.'
-      ],
-      answer: 1,
-      explanation: 'El BI se usa ampliamente para analizar ventas, rendimiento comercial, conversiones y oportunidades en diferentes segmentos.'
-    },
-    {
-      category: 'KPI e interpretación de datos',
-      question: 'Si una campaña aumenta las ventas y también mejora la tasa de conversión, ¿qué indicador ayuda a comparar rendimiento?',
-      options: [
-        'El color de la marca.',
-        'El KPI de conversión y el KPI de ventas.',
-        'La cantidad de empleados en la oficina.',
-        'La dirección del correo de la empresa.'
-      ],
-      answer: 1,
-      explanation: 'Los KPIs de conversión y ventas permiten comparar la eficiencia y el impacto de la campaña en el negocio.'
-    },
-    {
-      category: 'Toma de decisiones',
-      question: '¿Qué etapa sigue después de analizar los resultados en un proceso de decisión?',
-      options: [
-        'Ignorar el problema.',
-        'Evaluar alternativas y escoger la mejor opción.',
-        'Borrar los datos históricos.',
-        'Cambiar la estructura organizacional sin análisis.'
-      ],
-      answer: 1,
-      explanation: 'Después de interpretar los datos, la organización evalúa opciones posibles y decide qué acción genera mejor valor.'
-    },
-    {
-      category: 'Procesos ETL',
-      question: '¿Cuál de estas es una fuente típica de datos para extracción?',
-      options: [
-        'Un correo electrónico personal.',
-        'Una base de datos transaccional, un CSV o una API.',
-        'Un calendario de reuniones.',
-        'Un archivo de texto sin estructura.'
-      ],
-      answer: 1,
-      explanation: 'Las fuentes de datos del BI suelen incluir bases de datos, archivos tabulares y servicios con información estructurada.'
-    },
-    {
-      category: 'Limpieza y calidad de datos',
-      question: '¿Qué sentido tiene normalizar formatos en datos?',
-      options: [
-        'Hacer que los datos estén consistentes para compararlos correctamente.',
-        'Cambiar números por palabras.',
-        'Reducir el tamaño de la empresa.',
-        'Ocultar información relevante.'
+        'Un indicador clave de rendimiento.',
+        'Un tipo de base de datos.',
+        'Un nombre de una app.',
+        'Una estrategia de marketing.'
       ],
       answer: 0,
-      explanation: 'La normalización hace que fechas, textos, códigos y valores sigan un mismo estándar, evitando errores de comparación o análisis.'
+      explanation: 'Un KPI mide si una empresa está avanzando hacia un objetivo importante.'
     },
     {
-      category: 'Fundamentos de Business Intelligence',
-      question: '¿Qué diferencia principal existe entre BI y análisis predictivo?',
+      question: '¿Qué significa ETL?',
       options: [
-        'BI solo se usa en marketing y no en ventas.',
-        'BI describe y monitorea el desempeño actual, mientras el predictivo estima escenarios futuros.',
-        'No existe diferencia.',
-        'Predicción es un tipo de KPI.'
+        'Extraer, transformar y cargar.',
+        'Exportar, testear y localizar.',
+        'Enviar, traducir y listar.',
+        'Entrenar, transformar y limpiar.'
+      ],
+      answer: 0,
+      explanation: 'ETL significa extraer los datos, transformarlos y cargarlos en un destino analítico.'
+    },
+    {
+      question: '¿Por qué es importante limpiar datos?',
+      options: [
+        'Porque mejora la calidad y evita errores en los análisis.',
+        'Porque hace que el texto sea más corto.',
+        'Porque elimina la necesidad de reportes.',
+        'Porque cambia el nombre de la empresa.'
+      ],
+      answer: 0,
+      explanation: 'La limpieza de datos reduce errores, duplicados y valores inconsistentes.'
+    },
+    {
+      question: '¿Cuál es la mejor decisión cuando un dashboard muestra ventas bajas?',
+      options: [
+        'Ignorar la información.',
+        'Buscar la causa y evaluar opciones.',
+        'Eliminar el dashboard.',
+        'Cambiar toda la empresa de inmediato.'
       ],
       answer: 1,
-      explanation: 'BI se centra en reportes y desempeño actual; el análisis predictivo busca proyectar tendencias y probabilidades futuras.'
+      explanation: 'La BI ayuda a detectar problemas y evaluar alternativas antes de decidir.'
+    },
+    {
+      question: '¿Qué diferencia hay entre datos e información?',
+      options: [
+        'No hay diferencia.',
+        'Los datos son hechos sin contexto y la información los organiza.',
+        'La información siempre reemplaza a los datos.',
+        'Los datos solo sirven para bases de datos.'
+      ],
+      answer: 1,
+      explanation: 'Los datos son registros; la información les da sentido y permite analizarlos.'
     }
   ];
 
@@ -258,15 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
     resetButton.classList.remove('hidden');
 
     const percentage = Math.round(score);
-    let badge = 'Explorador de datos';
-    if (percentage >= 80) {
+    let badge = 'Principiante BI';
+    if (percentage >= 70) {
       badge = 'Analista BI';
     }
     if (percentage >= 90) {
-      badge = 'Estratega de decisiones';
-    }
-    if (percentage >= 95) {
-      badge = 'Maestro ETL';
+      badge = 'Estratega BI';
     }
 
     summaryElement.classList.remove('hidden');
@@ -278,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="badge-row">
         <span class="badge-pill">${badge}</span>
       </div>
-      <p>${score >= 70 ? '¡Muy bien! Estás avanzando con fuerza en BI.' : 'Sigue practicando; cada intento fortalece tu análisis.'}</p>
+      <p>${score >= 70 ? '¡Muy bien! Ya estás entendiendo bien los conceptos básicos.' : 'Sigue practicando; con un poco más de repaso vas a mejorar.'}</p>
     `;
   }
 
