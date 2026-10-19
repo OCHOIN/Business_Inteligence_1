@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="title desc">
+  <title id="title">Champions League illustration</title>
+  <desc id="desc">Stylized football tournament badge.</desc>
+  <defs>
+    <linearGradient id="c1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#13264d"/>
+      <stop offset="100%" stop-color="#264b9c"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="180" rx="28" fill="url(#c1)"/>
+  <circle cx="120" cy="90" r="55" fill="#f0c75e" opacity="0.28"/>
+  <circle cx="120" cy="90" r="36" fill="#f0c75e"/>
+  <path d="M120 48 L132 72 L160 74 L138 92 L146 120 L120 103 L94 120 L102 92 L80 74 L108 72 Z" fill="#0d1d33"/>
+  <path d="M62 58 L82 58 L90 78 L74 94 L62 58 Z" fill="#b8d6ff" opacity="0.65"/>
+  <path d="M178 58 L158 58 L150 78 L166 94 L178 58 Z" fill="#b8d6ff" opacity="0.65"/>
+</svg>

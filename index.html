@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Business Intelligence Lab: fundamentos, ETL, toma de decisiones y cuestionario interactivo sobre BI."
+    />
+    <title>Business Intelligence Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar sticky-top">
+      <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+          <img src="img/logo.svg" alt="Business Intelligence Lab" width="42" height="42" />
+          <span>Business Intelligence Lab</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Mostrar menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#fundamentos">Fundamentos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#etl">Procesos ETL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#quiz">Cuestionario</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary btn-dashboard" href="dashboard.html">Explorar dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="eyebrow">Plataforma académica de analítica</div>
+              <h1>Business Intelligence: transforma datos en decisiones inteligentes</h1>
+              <p>
+                Descubre cómo los datos se convierten en información útil para comprender
+                problemas, identificar oportunidades y tomar mejores decisiones.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#fundamentos">Aprender fundamentos</a>
+                <a class="btn btn-outline" href="#quiz">Practicar conocimientos</a>
+              </div>
+              <div class="hero-metrics">
+                <div>
+                  <strong>8</strong>
+                  <span>Conceptos clave</span>
+                </div>
+                <div>
+                  <strong>12</strong>
+                  <span>Preguntas de práctica</span>
+                </div>
+                <div>
+                  <strong>1</strong>
+                  <span>Dashboard interactivo</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-visual">
+                <img src="img/hero-bi.svg" alt="Ilustración de análisis de negocios" />
+                <div class="floating-card card-one">
+                  <span class="trend up">+18.4%</span>
+                  <small>Ventas globales</small>
+                </div>
+                <div class="floating-card card-two">
+                  <span class="status-dot"></span>
+                  <small>KPIs activos</small>
+                </div>
+                <div class="floating-card card-three">
+                  <span class="metric">92.6</span>
+                  <small>Score de decisión</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fundamentos" class="section py-5">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Fundamentos</span>
+            <h2>¿Qué es Business Intelligence?</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+              <article class="info-card">
+                <div class="card-icon"><i class="bi bi-database-check"></i></div>
+                <h3>Qué es BI</h3>
+                <p>
+                  Business Intelligence reúne procesos, herramientas y análisis para convertir
+                  datos en información útil para la organización.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="info-card">
+                <div class="card-icon"><i class="bi bi-building"></i></div>
+                <h3>¿Para qué sirve?</h3>
+                <p>
+                  Ayuda a monitorear rendimiento, detectar oportunidades y evaluar riesgos en
+                  ventas, operaciones, marketing y estrategia.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="info-card">
+                <div class="card-icon"><i class="bi bi-diagram-3"></i></div>
+                <h3>Datos, información y conocimiento</h3>
+                <p>
+                  Los datos son hechos sin contexto; la información los organiza; el
+                  conocimiento permite decidir con criterio.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="info-card">
+                <div class="card-icon"><i class="bi bi-bar-chart-line"></i></div>
+                <h3>Toma de decisiones basada en datos</h3>
+                <p>
+                  Reducir la intuición aislada y usar evidencia, contexto y métricas relevantes
+                  para priorizar acciones.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="comparison-panel mt-5">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <h3>Datos vs información vs conocimiento</h3>
+                <div class="comparison-list">
+                  <div><span>Datos</span><p>Registros, transacciones, cifras y eventos sin interpretación.</p></div>
+                  <div><span>Información</span><p>Datos organizados y analizados para responder una pregunta.</p></div>
+                  <div><span>Conocimiento</span><p>Comprensión aplicada que orienta decisiones de negocio.</p></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mini-diagram">
+                  <div class="node node-1">Datos</div>
+                  <div class="connector"></div>
+                  <div class="node node-2">Información</div>
+                  <div class="connector"></div>
+                  <div class="node node-3">Conocimiento</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-lg-6">
+              <article class="info-card premium">
+                <h3>Decisiones estratégicas, tácticas y operativas</h3>
+                <ul class="feature-list">
+                  <li><strong>Estrategicas:</strong> dirección general, expansión o inversión.</li>
+                  <li><strong>Tácticas:</strong> ajustes de campañas, segmentación y promociones.</li>
+                  <li><strong>Operativas:</strong> tareas diarias, control de inventario y procesos.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="col-lg-6">
+              <article class="info-card premium">
+                <h3>KPI y fuentes de datos</h3>
+                <ul class="feature-list">
+                  <li>KPIs: ventas, tasa de conversión, margen, retención, rotación.</li>
+                  <li>Fuentes: CRM, ERP, web analytics, tiendas, archivos CSV y APIs.</li>
+                  <li>Almacenamiento: bases de datos, data warehouses y lakes de datos.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="toma-decisiones" class="section soft-bg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Toma de decisiones</span>
+            <h2>Proceso de análisis para decidir mejor</h2>
+          </div>
+          <div class="decision-flow">
+            <div class="flow-item"><span>1</span>Identificar el problema</div>
+            <div class="flow-item"><span>2</span>Recopilar los datos</div>
+            <div class="flow-item"><span>3</span>Transformar y analizar</div>
+            <div class="flow-item"><span>4</span>Interpretar resultados</div>
+            <div class="flow-item"><span>5</span>Evaluar alternativas</div>
+            <div class="flow-item"><span>6</span>Tomar una decisión</div>
+            <div class="flow-item"><span>7</span>Medir y ajustar</div>
+          </div>
+
+          <div class="row g-4 mt-1 align-items-center">
+            <div class="col-lg-6">
+              <article class="info-card">
+                <h3>Ejemplo: tienda con caída de ventas</h3>
+                <p>
+                  Un comercio observa una caída del 14% en ventas mensuales. Revisa dashboard de
+                  ventas por canal, producto y sucursal. Descubre que una categoría pierde demanda
+                  en una zona específica y decide lanzar una campaña digital con oferta por segmento.
+                </p>
+                <ul class="feature-list compact">
+                  <li>Datos analizados: ingresos, tasa de conversión, visitas, stock y margen.</li>
+                  <li>KPI clave: ventas por sucursal, ticket promedio y rotación de inventario.</li>
+                  <li>Conclusión: la demanda cayó en línea con la pérdida de tráfico móvil.</li>
+                </ul>
+              </article>
+            </div>
+            <div class="col-lg-6">
+              <article class="info-card">
+                <h3>BI, analytics y predictivo</h3>
+                <div class="comparison-grid">
+                  <div>
+                    <strong>BI</strong>
+                    <p>Reporte, KPI, indicadores y seguimiento de desempeño.</p>
+                  </div>
+                  <div>
+                    <strong>Business Analytics</strong>
+                    <p>Diagnóstico y análisis para comprender por qué ocurre algo.</p>
+                  </div>
+                  <div>
+                    <strong>Predictivo</strong>
+                    <p>Modelos para estimar escenarios futuros y probabilidades.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="etl" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">ETL</span>
+            <h2>Extract, Transform y Load</h2>
+          </div>
+          <div class="etl-flow">
+            <span>Fuentes de datos</span>
+            <i class="bi bi-arrow-right"></i>
+            <span>Extracción</span>
+            <i class="bi bi-arrow-right"></i>
+            <span>Transformación</span>
+            <i class="bi bi-arrow-right"></i>
+            <span>Carga</span>
+            <i class="bi bi-arrow-right"></i>
+            <span>Dashboard</span>
+            <i class="bi bi-arrow-right"></i>
+            <span>Decisiones</span>
+          </div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-lg-4">
+              <article class="info-card">
+                <h3>Extract</h3>
+                <p>
+                  Se obtienen ventas desde bases de datos, CSV, hojas de cálculo y APIs.
+                  Ejemplo: extracción de registros de pedidos con fecha, cliente, producto y monto.
+                </p>
+              </article>
+            </div>
+            <div class="col-lg-4">
+              <article class="info-card">
+                <h3>Transform</h3>
+                <p>
+                  Se limpian nombres, eliminan duplicados, tratan nulos, normalizan formatos,
+                  convierten tipos y calculan indicadores como ticket promedio y margen.
+                </p>
+              </article>
+            </div>
+            <div class="col-lg-4">
+              <article class="info-card">
+                <h3>Load</h3>
+                <p>
+                  Los datos limpios se cargan en un almacén analítico o base de datos para alimentar
+                  dashboards y reportes operativos.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="etl-example mt-4">
+            <h3>Ejemplo práctico: registros ficticios de ventas</h3>
+            <div class="table-responsive">
+              <table class="table table-custom">
+                <thead>
+                  <tr>
+                    <th>Pedido</th>
+                    <th>Producto</th>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1001</td>
+                    <td>Mouse Wireless</td>
+                    <td>2025-10-01</td>
+                    <td>$49.99</td>
+                    <td>OK</td>
+                  </tr>
+                  <tr>
+                    <td>1002</td>
+                    <td>Mouse Wireless</td>
+                    <td>2025-10-01</td>
+                    <td>$49.99</td>
+                    <td>Duplicado</td>
+                  </tr>
+                  <tr>
+                    <td>1003</td>
+                    <td>Teclado Mecánico</td>
+                    <td>2025/10/02</td>
+                    <td>89.90</td>
+                    <td>OK</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="etl-note">
+              ETL transforma datos crudos en un dataset limpio; ETL y ELT cumplen objetivos parecidos,
+              pero ELT carga primero y transforma después cuando el destino analítico lo permite.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="caso" class="section soft-bg">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Business Intelligence en acción</span>
+            <h2>Casos reales de análisis para mejorar ventas</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-xl-4">
+              <article class="case-card">
+                <h3>Problema</h3>
+                <p>Una empresa comercial detecta una caída en ventas durante dos meses consecutivos.</p>
+              </article>
+            </div>
+            <div class="col-xl-4">
+              <article class="case-card">
+                <h3>Datos disponibles</h3>
+                <p>Ventas por región, canal, producto, categoría y margen de cada pedido.</p>
+              </article>
+            </div>
+            <div class="col-xl-4">
+              <article class="case-card">
+                <h3>Proceso ETL</h3>
+                <p>Se extrae, limpia y normaliza la información para preparar métricas comparables.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-lg-7">
+              <article class="info-card">
+                <h3>Indicadores y hallazgos</h3>
+                <div class="metric-row">
+                  <div class="metric-pill"><span>Ventas</span><strong>$120K</strong></div>
+                  <div class="metric-pill"><span>Ticket medio</span><strong>$62</strong></div>
+                  <div class="metric-pill"><span>Conversión</span><strong>4.3%</strong></div>
+                  <div class="metric-pill"><span>Margen</span><strong>26%</strong></div>
+                </div>
+                <div class="sales-bars" aria-label="Ventas por mes, datos simulados">
+                  <div class="bar-group"><span class="bar" style="height: 48%"></span><label>Jan</label></div>
+                  <div class="bar-group"><span class="bar" style="height: 52%"></span><label>Feb</label></div>
+                  <div class="bar-group"><span class="bar" style="height: 61%"></span><label>Mar</label></div>
+                  <div class="bar-group"><span class="bar" style="height: 57%"></span><label>Abr</label></div>
+                  <div class="bar-group"><span class="bar" style="height: 73%"></span><label>May</label></div>
+                  <div class="bar-group"><span class="bar" style="height: 80%"></span><label>Jun</label></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-5">
+              <article class="info-card">
+                <h3>Decisión propuesta</h3>
+                <ul class="feature-list compact">
+                  <li><strong>Hallazgo:</strong> una categoría de productos cayó en dos regiones.</li>
+                  <li><strong>Acción:</strong> reforzar campañas segmentadas y ajustar inventario.</li>
+                  <li><strong>Resultado esperado:</strong> recuperar volumen y mantener margen.</li>
+                </ul>
+                <p class="simulated-note">
+                  Todas las cifras de este ejemplo son datos simulados y solo sirven para ilustrar el
+                  proceso de análisis.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="section quiz-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Evaluación</span>
+            <h2>Cuestionario gamificado</h2>
+          </div>
+          <div id="quiz-app" class="quiz-shell">
+            <div class="quiz-topbar">
+              <div class="quiz-badge" id="quiz-step-indicator">Pregunta 1/12</div>
+              <div class="quiz-score" id="score-display">0 pts</div>
+            </div>
+            <div class="quiz-progress">
+              <div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+            </div>
+            <div class="quiz-body">
+              <div id="quiz-question" class="quiz-question"></div>
+              <div id="quiz-options" class="quiz-options" aria-live="polite"></div>
+              <div id="quiz-feedback" class="quiz-feedback hidden" aria-live="polite"></div>
+            </div>
+            <div class="quiz-actions">
+              <button id="quiz-next-btn" class="btn btn-primary" type="button" disabled>
+                Siguiente
+              </button>
+              <button id="quiz-reset-btn" class="btn btn-outline hidden" type="button">
+                Reiniciar
+              </button>
+            </div>
+            <div id="quiz-summary" class="quiz-summary hidden"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p>© <span data-year></span> Business Intelligence Lab</p>
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#fundamentos">Fundamentos</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+  </body>
+</html>

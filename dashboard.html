@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dashboard de Business Intelligence para la UEFA Champions League 2025-2026, con KPI, gráficos y filtros interactivos."
+    />
+    <title>Champions League BI Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dashboard-body">
+    <header class="dashboard-header">
+      <div class="container d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3 py-3">
+        <div>
+          <div class="eyebrow">Champions League BI Dashboard</div>
+          <h1>Champions League BI Dashboard</h1>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <a class="btn btn-outline-light" href="index.html">Volver a inicio</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container dashboard-main">
+      <section class="dashboard-toolbar card-panel">
+        <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center gap-3">
+          <div>
+            <p class="toolbar-season">Temporada 2025-2026</p>
+            <div class="status-row">
+              <span class="status-badge" id="data-status-badge">Datos simulados</span>
+              <span class="last-updated" id="last-updated">Actualización: demo académica</span>
+            </div>
+          </div>
+          <div class="toolbar-actions">
+            <button id="exportCsvBtn" class="btn btn-primary" type="button">Exportar CSV</button>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-2">
+          <div class="col-md-3">
+            <label class="form-label" for="filterStage">Fase de competición</label>
+            <select id="filterStage" class="form-select">
+              <option value="Todos">Todos</option>
+              <option value="Fase de grupos">Fase de grupos</option>
+              <option value="Eliminatorias">Eliminatorias</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="filterTeam">Equipo</label>
+            <select id="filterTeam" class="form-select">
+              <option value="Todos">Todos</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="filterPeriod">Intervalo temporal</label>
+            <select id="filterPeriod" class="form-select">
+              <option value="Todas">Todas</option>
+              <option value="1-2">Jornadas 1-2</option>
+              <option value="3-4">Jornadas 3-4</option>
+              <option value="5-6">Jornadas 5-6</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label" for="filterMetric">Métrica analizada</label>
+            <select id="filterMetric" class="form-select">
+              <option value="golesFavor">Goles a favor</option>
+              <option value="golesEnContra">Goles en contra</option>
+              <option value="diferenciaGoles">Diferencia de goles</option>
+              <option value="puntos">Puntos</option>
+            </select>
+          </div>
+          <div class="col-md-3 d-flex align-items-end">
+            <button id="resetFiltersBtn" class="btn btn-reset w-100" type="button">Restablecer filtros</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="dashboardAlert" class="dashboard-alert hidden" role="alert"></div>
+
+      <section class="kpi-grid">
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Partidos disputados</div>
+          <div class="kpi-value" id="kpi-partidos">0</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Goles anotados</div>
+          <div class="kpi-value" id="kpi-goles">0</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Promedio de goles</div>
+          <div class="kpi-value" id="kpi-promedio">0.0</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Victorias locales</div>
+          <div class="kpi-value" id="kpi-locales">0</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Victorias visitantes</div>
+          <div class="kpi-value" id="kpi-visitantes">0</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Empates</div>
+          <div class="kpi-value" id="kpi-empates">0</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Equipo con más goles</div>
+          <div class="kpi-value" id="kpi-top-team">—</div>
+        </article>
+        <article class="kpi-card card-panel">
+          <div class="kpi-label">Máximo goleador</div>
+          <div class="kpi-value" id="kpi-top-scorer">—</div>
+        </article>
+      </section>
+
+      <section class="charts-grid">
+        <article class="chart-panel card-panel">
+          <h2>Goles por equipo</h2>
+          <canvas id="chartGoalsByTeam"></canvas>
+        </article>
+        <article class="chart-panel card-panel">
+          <h2>Distribución de resultados</h2>
+          <canvas id="chartResultMix"></canvas>
+        </article>
+        <article class="chart-panel card-panel wide">
+          <h2>Evolución temporal de goles</h2>
+          <canvas id="chartTimeline"></canvas>
+        </article>
+        <article class="chart-panel card-panel">
+          <h2>Comparación por métrica</h2>
+          <canvas id="chartMetricComparison"></canvas>
+        </article>
+        <article class="chart-panel card-panel">
+          <h2>Radar comparativo</h2>
+          <canvas id="chartRadar"></canvas>
+        </article>
+        <article class="chart-panel card-panel">
+          <h2>Relación goles a favor vs en contra</h2>
+          <canvas id="chartScatter"></canvas>
+        </article>
+      </section>
+
+      <section class="table-panel card-panel">
+        <div class="table-header">
+          <h2>Clasificación</h2>
+          <span class="table-note">Nota: tabla demostrativa; no constituye clasificación oficial.</span>
+        </div>
+        <div class="table-responsive">
+          <table id="standingsTable" class="table table-dark table-striped align-middle">
+            <thead>
+              <tr>
+                <th>Posición</th>
+                <th>Equipo</th>
+                <th>Partidos</th>
+                <th>Victorias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DG</th>
+                <th>Puntos</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="insight-panel card-panel">
+        <h2>Insights del analista</h2>
+        <ul id="insightsList" class="insight-list"></ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/dashboard.js" defer></script>
+  </body>
+</html>
