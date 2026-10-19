@@ -1,0 +1,416 @@
+:root {
+  --silabo-bg: #f5f7ff;
+  --silabo-panel: rgba(255, 255, 255, 0.9);
+  --silabo-card: #ffffff;
+  --silabo-border: rgba(148, 163, 184, 0.22);
+  --silabo-text: #1e293b;
+  --silabo-muted: #475569;
+  --silabo-strong: #0f172a;
+  --silabo-primary: #3b82f6;
+  --silabo-primary-dark: #1d4ed8;
+  --silabo-accent: #8b5cf6;
+  --silabo-glow: rgba(59, 130, 246, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.silabo-body {
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 30%),
+    linear-gradient(180deg, #edf4ff 0%, var(--silabo-bg) 36%, #eef2ff 100%);
+  color: var(--silabo-text);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.silabo-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+  background: rgba(237, 244, 255, 0.8);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.navbar-brand {
+  color: var(--silabo-strong) !important;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.navbar-nav .nav-link {
+  color: var(--silabo-muted);
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--silabo-primary-dark);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--silabo-primary), var(--silabo-accent));
+  border: none;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.24);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, var(--silabo-primary-dark), var(--silabo-accent));
+  border: none;
+}
+
+.btn-outline-primary {
+  color: var(--silabo-primary-dark);
+  border-color: rgba(59, 130, 246, 0.45);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.8);
+  color: var(--silabo-primary-dark);
+}
+
+.silabo-main {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.card-panel {
+  background: var(--silabo-panel);
+  border: 1px solid var(--silabo-border);
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.page-hero {
+  padding: 2rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(59, 130, 246, 0.12);
+  border-radius: 999px;
+  color: var(--silabo-primary-dark);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.page-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+  color: var(--silabo-strong);
+}
+
+.page-hero p {
+  margin: 0;
+  color: var(--silabo-muted);
+  font-size: 1rem;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.meta-card {
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.meta-card span {
+  color: var(--silabo-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.meta-card strong {
+  font-size: 1.02rem;
+  color: var(--silabo-strong);
+}
+
+.content-section {
+  margin-top: 2.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1.25rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  letter-spacing: -0.05em;
+  color: var(--silabo-strong);
+}
+
+.info-card,
+.resource-card,
+.project-card,
+.teacher-card,
+.skill-card,
+.timeline-card {
+  padding: 1.5rem;
+}
+
+.info-card h3,
+.resource-card h3,
+.project-card h3,
+.teacher-card h3,
+.skill-card h3,
+.timeline-card h3 {
+  margin-bottom: 0.9rem;
+  font-size: 1.2rem;
+  color: var(--silabo-strong);
+}
+
+.info-card p,
+.resource-card p,
+.project-card p,
+.skill-card p,
+.teacher-card p,
+.timeline-card p,
+.feature-list,
+.unit-details ol,
+.resource-card ul {
+  color: var(--silabo-muted);
+}
+
+.feature-list {
+  padding-left: 1.2rem;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.unit-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.unit-details h4 {
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--silabo-primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+.unit-details ol {
+  padding-left: 1.1rem;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.accordion-item {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--silabo-strong);
+  font-size: 1.02rem;
+  font-weight: 700;
+  padding: 1rem 1.2rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--silabo-strong);
+  background: rgba(91, 141, 255, 0.08);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.eval-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.eval-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--silabo-primary), var(--silabo-accent));
+}
+
+.eval-tag {
+  display: inline-flex;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--silabo-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.countdown {
+  margin-top: 0.8rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.9rem;
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--silabo-primary-dark);
+  font-weight: 700;
+}
+
+.countdown.is-done {
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+}
+
+.timeline-note {
+  margin-top: 1rem;
+  color: var(--silabo-muted);
+  font-size: 0.92rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skill-icon {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
+  color: var(--silabo-primary-dark);
+  font-size: 1.4rem;
+}
+
+.resource-card ul {
+  padding-left: 1rem;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.resource-card a,
+.site-footer a {
+  color: var(--silabo-primary-dark);
+  text-decoration: none;
+}
+
+.resource-card a:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.teacher-grid span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--silabo-primary-dark);
+}
+
+.site-footer {
+  padding: 1.25rem 0 2rem;
+  color: var(--silabo-muted);
+}
+
+.footer-links {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .page-hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .silabo-main {
+    padding-top: 1.25rem;
+  }
+
+  .resource-card,
+  .project-card,
+  .info-card,
+  .teacher-card,
+  .skill-card,
+  .timeline-card {
+    padding: 1.1rem;
+  }
+}
+
+@media print {
+  body.silabo-body {
+    background: white;
+  }
+
+  .silabo-header,
+  .site-footer,
+  .btn,
+  .accordion-button {
+    display: none !important;
+  }
+
+  .silabo-main {
+    padding: 0;
+  }
+
+  .card-panel {
+    box-shadow: none;
+  }
+}
