@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusBadge = document.getElementById('data-status-badge');
   const lastUpdated = document.getElementById('last-updated');
 
-  if (statusBadge) statusBadge.textContent = 'Datos simulados';
-  if (lastUpdated) lastUpdated.textContent = 'Actualización: muestra académica sin datos oficiales';
+  if (statusBadge) statusBadge.textContent = 'Datos de referencia (no oficiales)';
+  if (lastUpdated) lastUpdated.textContent = 'Actualización: conjunto académico con clubes y métricas de referencia';
 
   function showAlert(message) {
     if (!dashboardAlert) return;

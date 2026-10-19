@@ -1,5 +1,5 @@
 :root {
-  --bg: #081426;
+  --bg: #edf4ff;
   --bg-soft: #0d1d33;
   --panel: #111d35;
   --panel-light: #f5f7ff;
@@ -14,6 +14,26 @@
   --danger: #ff5d6c;
   --border: rgba(16, 35, 59, 0.12);
   --shadow: 0 20px 45px rgba(10, 19, 34, 0.12);
+  --hero-bg: linear-gradient(180deg, #09192e 0%, #091c31 100%);
+  --site-bg: linear-gradient(180deg, #edf4ff 0%, #f6f8ff 100%);
+  --topbar-bg: rgba(8, 20, 38, 0.88);
+  --nav-link: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+body[data-theme="dark"] {
+  --bg: #050b16;
+  --site-bg: linear-gradient(180deg, #0a1220 0%, #0e1d33 100%);
+  --hero-bg: linear-gradient(180deg, #081827 0%, #101f39 100%);
+  --topbar-bg: rgba(6, 12, 21, 0.94);
+  --nav-link: rgba(232, 239, 255, 0.82);
+  --card-bg: rgba(11, 23, 38, 0.94);
+  --text: #edf3ff;
+  --muted: #afc1de;
+  --card: #0f1a2d;
+  --panel-light: #0b1426;
+  --border: rgba(160, 179, 219, 0.18);
+  --shadow: 0 18px 52px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -27,8 +47,9 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #edf4ff 0%, #f6f8ff 100%);
+  background: var(--site-bg);
   color: var(--text);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 a {
@@ -45,7 +66,7 @@ img {
 }
 
 .topbar {
-  background: rgba(8, 20, 38, 0.88);
+  background: var(--topbar-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 20;
@@ -61,7 +82,7 @@ img {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--nav-link);
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -100,7 +121,7 @@ img {
   position: relative;
   padding: 7rem 0 5rem;
   background: radial-gradient(circle at top left, rgba(40, 84, 228, 0.12), transparent 40%),
-    linear-gradient(180deg, #09192e 0%, #091c31 100%);
+    var(--hero-bg);
   color: #fff;
 }
 
@@ -235,7 +256,7 @@ img {
 .comparison-panel,
 .quiz-shell,
 .card-panel {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 24px;
   box-shadow: var(--shadow);
@@ -641,6 +662,21 @@ img {
   color: var(--secondary);
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.theme-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .site-footer {
